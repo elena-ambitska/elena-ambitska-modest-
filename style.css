@@ -171,7 +171,8 @@ body {
 .banner {
     background-image: url(img/img\ \(2\).png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: auto 100%;
+
 }
 
 .welcome-text {
@@ -327,6 +328,7 @@ hr {
 
 .img-card:hover .img-description {
     background-color: #3a454d;
+
 }
 
 .img-card:hover .job-title {
@@ -355,7 +357,6 @@ hr {
     font-family: "Quattrocento Sans";
 }
 
-
 .our-team img {
     width: 100%;
 }
@@ -363,22 +364,31 @@ hr {
 .img-card {
     display: flex;
     flex-direction: column;
-    position: absolut;
-
+    position: relative;
 }
+
 
 .img-card:hover .social {
     display: block;
+
 }
+
 .img-card:hover .icons{
     background-color:#3a454d;
     width: 50px;
     height: 50px;
 }
+
+.img-card:hover img{
+    opacity: 50%;
+}
+
 .social {
-    position: relative;
-    top: -250px;
-    left: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -75px;
+    margin-top: -25px;
     display: none;
 
 }
