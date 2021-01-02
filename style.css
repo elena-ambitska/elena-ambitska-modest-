@@ -22,6 +22,7 @@ body {
     margin-left: -15px;
     margin-right: -15px;
     flex: 0 0 100%;
+    flex-wrap: wrap;
 }
 
 .flex-wrap {
@@ -49,12 +50,6 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
-
-.col-xs-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
 
 .header .main-menu ul {
     display: flex;
@@ -168,6 +163,15 @@ body {
     max-width: 25%;
 }
 
+.col-md-4 {
+    flex: 0 0 33%;
+    max-width: 33%;
+}
+
+.col-md-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
 .banner {
     background-image: url(img/img\ \(2\).png);
     background-repeat: no-repeat;
@@ -246,8 +250,6 @@ ol.goals li {
     counter-increment: my-awesome-counter;
     display: flex;
     width: 100%;
-
-
 }
 
 ol.goals li::before {
@@ -262,7 +264,6 @@ ol.goals li::before {
     height: 50px;
     width: 100px;
     text-align: center;
-
 }
 
 b {
@@ -359,12 +360,14 @@ hr {
 
 .our-team img {
     width: 100%;
+
 }
 
 .img-card {
     display: flex;
     flex-direction: column;
     position: relative;
+    padding-bottom: 100px;
 }
 
 
@@ -390,9 +393,160 @@ hr {
     margin-left: -75px;
     margin-top: -25px;
     display: none;
+}
+
+.work {
+    background-color: #3a454d;
+}
+
+.work img {
+    position: inherit;
+}
+
+.work-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.overaly {
+    background-color: #292f36;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Quattrocento Sans";
+    height: 60px;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-top: 20px;
+    display: none;
+}
+
+.work-item:hover .overaly {
+    display: block;
+}
+
+.work-item:hover .picture {
+    opacity: 0.5;
+}
+
+
+.show-more {
+    width: 150px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Quattrocento Sans";
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.show-me-more {
+    text-align: center;
+}
+
+.services {
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.services h3 {
+    text-align: center;
+    padding-top: 80px;
+}
+
+.services p {
+    text-align: center;
+    color: #8d8f92;
+    ;
+}
+
+.cogs {
+    background-image: url(img/icons/icon\ \(12\).png);
+}
+
+.pencil {
+    background-image: url(img/icons/icon\ \(14\).png);
+}
+
+.mobile {
+    background-image: url(img/icons/icon\ \(11\).png);
+}
+
+.clock {
+    background-image: url(img/icons/icon\ \(13\).png);
+}
+
+.post-item h3 {
+    color: #bdc1c4;
+    margin-top: 50px;
+}
+
+.post-item p {
+    color: #dcdfe1;
+}
+
+.services p {
+    text-align: left;
 
 }
-@media(min-width:768px) {
+
+.last-row {
+    justify-content: left;
+}
+
+.services h4 {
+    font-size: 20px;
+    color: #292f36;
+    font-weight: 700;
+    font-family: "Quattrocento Sans";
+    text-align: left;
+    margin-top:60px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer{
+    background-color: #3a454d;
+    height: 100px;
+}
+
+.footer-text {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Open Sans";
+   
+}
+
+.footer-icons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.footer-icons a{
+    background: transparent;
+    border:none;
+   
+}
+
+.footer-icons img{
+    height: 20px;
+
+}
+
+@media(min-width:768px) and (max-width:1199px) {
     .col-sm-1 {
         flex: 0 0 16.6667%;
         max-width: 16.6667%;
@@ -431,15 +585,9 @@ hr {
         padding-left: 50px;
     }
 
-    .section-header {
-        margin-top: 40px;
-        margin-bottom: 30px;
-    }
-
     .welcome-text {
         height: auto;
         padding: 100px 0;
-
     }
 
     hr {
@@ -457,19 +605,27 @@ hr {
     .img-card {
         margin-bottom: 20px;
     }
-}
 
-@media(min-width:992px) {
-    .container {
-        max-width: 960px;
+    .row {
+        flex-wrap: wrap;
     }
 
-
+    .picture {
+        width: 100%;
+    }
 }
 
 @media(min-width:1200px) {
     .container {
-        max-width: 1140px;
+        max-width: 1200px;
+    }
+    .col-md-6{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-md-4 {
+        flex: 0 0 33, 3333%;
+        max-width: 33, 3333%;
     }
 
     .col-md-2 {
@@ -500,6 +656,10 @@ hr {
     .col-md-3 {
         flex: 0 0 25%;
         max-width: 25%;
+    }
+
+    .row {
+        flex-wrap: wrap;
     }
 }
 
@@ -575,5 +735,9 @@ hr {
         background-size: cover;
         background-position: center top;
         padding-left: 50px;
+    }
+
+    .picture {
+        width: 100%;
     }
 }
